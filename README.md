@@ -51,8 +51,11 @@ Control/play 2D animation (Sprite sheet animation)/ sequence image animations
     //8# (0)
     //id of animation request (you will get return this id on "OnFrameChange"/"OnLoopComplete"/"OnAnimationFinish" listner)
     
+    //don't forgot to Add all images in "drawable" folder
+    //eg: img0.png to img73.png (all 74 files!)
 
 
+#Animation Listner
 
     //Animation listner
     private BroadcastReceiver animatorListener = new BroadcastReceiver() {
@@ -69,8 +72,12 @@ Control/play 2D animation (Sprite sheet animation)/ sequence image animations
     //don't forgot to Add all images in "drawable" folder
     //eg: img0.png to img73.png (all 74 files!)
 
+#Register Animation Listner
+
+        LocalBroadcastManager.getInstance(this).registerReceiver(animatorListener, new IntentFilter("ANIMATOR_LISTENER"));
 
 #Cancel Animation
+
 1) cancel animation on current frame
 		
         a.cancelAnimationNow();
