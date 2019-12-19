@@ -4,6 +4,25 @@ Control/play 2D animation (Sprite sheet animation)/ sequence image animations
 3) cancel the animation on the current frame.
 4) cancel the animation on completion current loop.
 
+#Usage:
+
+#Project Level:
+
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+	
+	
+#App Level:
+
+	dependencies {
+	        implementation 'com.github.sagarmakhija1994:SpriteAnimationSLib:1.0.0'
+	}
+	
+    
 # JAVA Code
     animator a = new animator();
     a.animateSprite(0,72,"img",30,-10,imgMain,MainActivity.this,0);
@@ -53,10 +72,10 @@ Control/play 2D animation (Sprite sheet animation)/ sequence image animations
 
 #Cancel Animation
 1) cancel animation on current frame
-  
-    a.cancelAnimationNow();
-  
+		
+        a.cancelAnimationNow();
+        
 2) cancel animation when current loop finish
-  
-    a.cancelAnimation();
-  
+		
+        a.cancelAnimation();
+        
