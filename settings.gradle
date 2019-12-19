@@ -1,0 +1,2 @@
+include ':app', ':spriteanimationslib'
+rootProject.name='Sprite Sheet'
